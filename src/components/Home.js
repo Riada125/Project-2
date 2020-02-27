@@ -6,7 +6,7 @@ const Home = () => (
 
     <div className="hero-body">
       <div className="container">
-        <p className="title is-1 has-text-right"> Search for your Fave Artists </p>
+        <p className="title is-1 has-text-right"> Search for your Favourite Artists </p>
         <p className="subtitle  has-text-right">Then play the best 30 seconds of their tracks!</p>
       </div>
     </div>
