@@ -171,7 +171,7 @@ componentDidMount() {
 
 ### Functional Components and Styling
 
-Functional components such as `ChartCard` and `TrackCard` are used to render the information from the API in a visually pleasing way. Due to this being a hackathon, we used the Bulma CSS Framework to keep out layout simple, clean and suitable for mobile. 
+Functional components such as `ChartCard` and `TrackCard` are used to render the information from the API in a visually pleasing way. Due to this being a hackathon, we used the Bulma CSS Framework to keep our layout simple, clean and suitable for mobile. 
 
 An example of the `TrackCard` functional component is below: 
 
