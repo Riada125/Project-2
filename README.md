@@ -59,8 +59,7 @@ const App = () => (
 )
 ```
 
-<img  src=src/img/Screenshots/DesktopHome.png width=500>
-<img  src=src/img/Screenshots/PhoneHome.png height=250> 
+<img  src=src/img/Screenshots/DesktopHome.png width=500> <img  src=src/img/Screenshots/PhoneHome.png height=250> 
 
 
 ### The NavBar
@@ -134,8 +133,7 @@ This checks the current props passed to the searchBar against the previous props
 
 Here is how the page renders when the user searches for an artist in the search bar:
 
-<img src=src/img/Screenshots/DesktopArtists.png width=500> 
-<img src=src/img/Screenshots/PhoneArtists.png height=250>
+<img src=src/img/Screenshots/DesktopArtists.png width=500> <img src=src/img/Screenshots/PhoneArtists.png height=250>
 
 ### Loading
 
