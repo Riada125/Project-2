@@ -59,6 +59,10 @@ const App = () => (
 )
 ```
 
+<img  src=src/img/Screenshots/DesktopHome.png width=500>
+<img  src=src/img/Screenshots/PhoneHome.png height=250> 
+
+
 ### The NavBar
 
 The Navbar, which contains the search bar, is continuously rendered on the UI. This searchbar utilises a class component as below:
@@ -126,7 +130,23 @@ Because we want the user to be able to consistently make requests via the Search
   }
 ```
 
-This checks the current props passed to the searchBar against the previous props that would have been passed to it 
+This checks the current props passed to the searchBar against the previous props that would have been passed to it and updates the component's state and re-renders accordingly. 
+
+Here is how the page renders when the user searches for an artist in the search bar:
+
+<img src=src/img/Screenshots/DesktopArtists.png width=500> 
+<img src=src/img/Screenshots/PhoneArtists.png height=250>
+
+### Loading
+
+If the data from the API has yet to return and be set in state, then a gif is displayed in the render to indicate loading:
+
+```js
+ render() {
+    if (!this.state.results) return <Loading />
+```
+
+![](src/img/vinylspin.gif)
 
 
 
