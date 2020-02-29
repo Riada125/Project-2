@@ -33,7 +33,6 @@ class SelectedArtist extends React.Component {
     }
 
     if (!this.state.albumResults) return <Loading />
-    // console.log(this.state.albumResults)
     return <div className="section has-background-black">
       <div className="container has-background-black">
         <div className="columns is-mobile is-multiline">

@@ -108,7 +108,7 @@ class SearchBar extends React.Component {
   }
 ```
 
-We then make a call to the Deezer API, using `axios` and setting the results in state. 
+We then make a call to the [Deezer API]((https://developers.deezer.com/api/)), using `axios` and setting the results in state. 
 
 ```js
   getData() {
@@ -147,6 +147,33 @@ If the data from the API has yet to return and be set in state, then a gif is di
 ```
 
 ![](src/img/vinylspin.gif)
+
+
+### Other Class Components 
+
+The other class components `selectedAlbum` and `selectedArtist` are similar to the search bar above. Props are passed to them through the `BrowserRouter` using the unique ID that is provided from the Deezer API. An example is below:
+
+Once a user has searched for an artist, the application maps through each of the returned results and renders a 'card' displaying that artist. Selecting that card will route the user using the unique id of the selected item.
+
+` <Link className="subtitle" to={${results.id}/album}>{results.name}</Link>`
+
+This passes through the router here:
+
+`<Route exact path="/:id/album" component={SelectedArtist} />`
+
+The unique id forms the path and so can be used as the props passed to the api in our request for more information on that specific artist:
+
+```js  
+componentDidMount() {
+    axios.get(`https://cors-anywhere.herokuapp.com/api.deezer.com/artist/${this.props.match.params.id}/albums`)
+      .then(resp => this.setState({ albumResults: resp.data.data }))
+      .catch(err => this.setState({ err: err.response.status }))
+  } 
+```
+
+### Functional Components 
+
+
 
 
 
