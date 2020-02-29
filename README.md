@@ -88,7 +88,7 @@ class Navbar extends React.Component {
     this.props.history.push(`/search/${this.state.userinput}`)
   }
 ```
-The user's input is set in state, and when the input is submitted this state is pushed as props, which, via the `<BrowserRouter>` calls the `{SearchBar}` component. 
+The user's input is set in state, and when the input is submitted, this state is pushed as props, which, via the `<BrowserRouter>` calls the `{SearchBar}` component. 
 
 
 ### The SearchBar
@@ -169,8 +169,31 @@ componentDidMount() {
   } 
 ```
 
-### Functional Components 
+### Functional Components and Styling
 
+Functional components such as `ChartCard` and `TrackCard` are used to render the information from the API in a visually pleasing way. Due to this being a hackathon, we used the Bulma CSS Framework to keep out layout simple, clean and suitable for mobile. 
+
+An example of the `TrackCard` functional component is below: 
+
+```js
+import React from 'react'
+
+const TrackCard = ({ trackResults }) => (
+  <div className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+    <div className='container'>
+      <p>{trackResults.track_position}. {trackResults.title_short}</p>
+      <div className="card-content">
+        <audio src={trackResults.preview} controls />
+      </div>
+    </div>
+  </div>
+)
+export default TrackCard
+```
+
+The `className` is dictated by the Bulma CSS framework whilst the `trackResults` prop is passed from the `selectedAlbum` component.
+
+<img src=src/img/Screenshots/DesktopMenu.png width=500> 
 
 
 
