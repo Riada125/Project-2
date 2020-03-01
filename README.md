@@ -144,7 +144,7 @@ If the data from the API has yet to return and be set in state, then a gif is di
     if (!this.state.results) return <Loading />
 ```
 
-![](src/img/vinylspin.gif)
+<img src= src/img/vinylspin.gif width= 150>
 
 
 ### Other Class Components 
@@ -171,7 +171,7 @@ componentDidMount() {
 
 ### Functional Components and Styling
 
-Functional components such as `ChartCard` and `TrackCard` are used to render the information from the API in a visually pleasing way. Due to this being a hackathon, we used the Bulma CSS Framework to keep our layout simple, clean and suitable for mobile. 
+Functional components such as `ChartCard` and `TrackCard` are used to render the information from the API in a visually pleasing way. Due to this being a hackathon, we used the Bulma CSS Framework to keep our layout simple, clean and easily suitable for mobile use. 
 
 An example of the `TrackCard` functional component is below: 
 
@@ -200,15 +200,24 @@ The `className` is dictated by the Bulma CSS framework whilst the `trackResults`
 
 ## Challenges
 
+- This was our first use of the React App that utilised multiple components and routing. Understanding how to pass props between components took a little time to for us to get to grips with. 
+
 
 ## Successes
+- My first experience of Pair programming is something I particularly enjoyed. The spirit of collaboration and comporomise made this a really fun project to work on and I'm proud of the finished product given that it was our first time-limited 'hackathon'. 
 
 
 ## Potential future features
+- We built this using class components, but I'd be interested in refactoring it to utilise React Hooks in future, which I believe is a cleaner, nicer way of setting and updating state. 
+
+- Due to the time constraints, the search functionality currently only looks for Artists. It would be fun to make the search facility wider to include Tracks, Albums and Artists.
 
 
 ## Lessons learned
 
+- First experience of Pair Programming
+- How to successfully pass props between React Components
+- How to update State within the same Component with `componentDidUpdate()`
 
 
 
